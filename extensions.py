@@ -10,7 +10,7 @@ class APIException(Exception):
 
 class Converter:
     @staticmethod
-    def convert(base, quote, amount):
+    def get_price(base, quote, amount):  # Отлов исключений пользователя
         if base == quote:
             raise APIException(f"Перевести {base} в себя же нельзя")
 
